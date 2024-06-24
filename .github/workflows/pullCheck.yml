@@ -49,7 +49,7 @@ jobs:
                path: second
          # imports the model
         - name: install-plugin
-          run: pip install git+${{env.REPO}}
+          run: pip install git+https://github.com/${{env.REPO}}
         - name: move-submission-file
           run: mv -f second/submission.yml .
         - name: submission-file-tests
