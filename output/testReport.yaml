@@ -1,0 +1,457 @@
+---
+cannot_update_after_finalized_condition:
+  critical: true
+  description: Checks if the .finalize method of the model is correctly implemented
+  enabled: true
+  name: cannot_update_after_finalized_condition
+  passed: true
+  reason: Finalized correctly
+correct_end_time_condition:
+  critical: true
+  description: Tests if the bmi method get_end_time() gets the correct end time.
+  enabled: true
+  name: correct_end_time_condition
+  passed: true
+  reason: The test passed successfully
+correct_start_time:
+  critical: true
+  description: Checks if the start time of the model is correct
+  enabled: true
+  name: correct_start_time
+  passed: true
+  reason: The test passed successfully
+correct_start_time_condition:
+  critical: true
+  description: Tests if the bmi method get_start_time() gets the correct start time.
+  enabled: true
+  name: correct_start_time_condition
+  passed: true
+  reason: The test passed successfully
+correct_time_condition:
+  critical: true
+  description: Tests if the bmi method get_current_time() gets the correct time at
+    the start.
+  enabled: true
+  name: correct_time_condition
+  passed: true
+  reason: The test passed successfully
+finalize_model_condition:
+  critical: true
+  description: Tests if the bmi method finalize() doesn't throw any errors.
+  enabled: true
+  name: finalize_model_condition
+  passed: true
+  reason: The test passed successfully
+first_half_precip_lumped_test:
+  critical: false
+  description: Tests if the model outputs correct discharge when precipitation only
+    occurs in the first half of the input period
+  enabled: true
+  name: first_half_precip_lumped_test
+  passed: true
+  reason: The test passed successfully
+get_grid_x_condition:
+  critical: true
+  description: Tests if the bmi method get_grid_x() gets a valid response.
+  enabled: true
+  name: get_grid_x_condition
+  passed: true
+  reason: The test passed successfully
+get_grid_y_condition:
+  critical: true
+  description: Tests if the bmi method get_grid_y() gets a valid response.
+  enabled: true
+  name: get_grid_y_condition
+  passed: true
+  reason: The test passed successfully
+get_ouput_var_names_condition:
+  critical: true
+  description: Tests if bmi method get_output_var_names() gets a list of strings.
+  enabled: true
+  name: get_ouput_var_names_condition
+  passed: true
+  reason: The test passed successfully
+get_time_step_condition:
+  critical: true
+  description: Tests if the bmi method get_time_step() gets a correct time step.
+  enabled: true
+  name: get_time_step_condition
+  passed: true
+  reason: The test passed successfully
+grid_shape_condition:
+  critical: true
+  description: Tests if the method get_grid_shape() gets a valid grid shape.
+  enabled: true
+  name: grid_shape_condition
+  passed: true
+  reason: The test passed successfully
+grid_size_condition:
+  critical: true
+  description: Tests if the bmi method get_grid_size() gets a valid response.
+  enabled: true
+  name: grid_size_condition
+  passed: true
+  reason: The test passed successfully
+grid_type_mismatch:
+  critical: true
+  description: tests if the rank of the model's grids matches their type
+  enabled: true
+  name: grid_type_mismatch
+  passed: true
+  reason: The test passed successfully
+grid_type_mismatch_condition:
+  critical: true
+  description: Tests if the bmi methods get_grid_type() and get_grid_rank() give fitting
+    responses.
+  enabled: true
+  name: grid_type_mismatch_condition
+  passed: true
+  reason: The test passed successfully
+has_bmi:
+  critical: true
+  description: Checks if .bmi is implemented
+  enabled: true
+  name: has_bmi
+  passed: true
+  reason: The test passed successfully
+has_check_parameter_set:
+  critical: true
+  description: Checks if ._check_parameter_set is implemented
+  enabled: true
+  name: has_check_parameter_set
+  passed: true
+  reason: The test passed successfully
+has_end_time_as_datetime:
+  critical: true
+  description: Checks if .end_time_as_datetime is implemented and has correct typing
+  enabled: true
+  name: has_end_time_as_datetime
+  passed: true
+  reason: The test passed successfully
+has_end_time_as_isostr:
+  critical: true
+  description: Checks if .end_time_as_isostr is implemented and has correct format
+  enabled: true
+  name: has_end_time_as_isostr
+  passed: true
+  reason: The test passed successfully
+has_get_lat_lon_grid:
+  critical: true
+  description: Checks if the .get_latlon_grid method of the model is correctly implemented
+  enabled: true
+  name: has_get_lat_lon_grid
+  passed: true
+  reason: The test passed successfully
+has_get_value_as_x_array:
+  critical: true
+  description: Checks if the .get_value_as_xarray method of the model is correctly
+    implemented
+  enabled: true
+  name: has_get_value_as_x_array
+  passed: true
+  reason: The test passed successfully
+has_make_bmi_instance:
+  critical: true
+  description: Checks if ._make_bmi_instance is implemented
+  enabled: true
+  name: has_make_bmi_instance
+  passed: true
+  reason: The test passed successfully
+has_make_cfg_dir:
+  critical: true
+  description: Checks if _make_cfg_dir is implemented
+  enabled: true
+  name: has_make_cfg_dir
+  passed: true
+  reason: The test passed successfully
+has_make_cfg_file:
+  critical: true
+  description: Checks if _make_cfg_file is implemented
+  enabled: true
+  name: has_make_cfg_file
+  passed: true
+  reason: The test passed successfully
+has_parameters:
+  critical: true
+  description: Checks if .parameters is implemented
+  enabled: true
+  name: has_parameters
+  passed: true
+  reason: The test passed successfully
+has_repr_args:
+  critical: true
+  description: Checks if .__repr_args__ is implemented
+  enabled: true
+  name: has_repr_args
+  passed: true
+  reason: The test passed successfully
+has_required_methods_condition:
+  critical: true
+  description: Tests if the model has all required methods.
+  enabled: true
+  name: has_required_methods_condition
+  passed: true
+  reason: The test passed successfully
+has_start_time_as_datetime:
+  critical: true
+  description: Checks if .start_time_as_datetime is implemented and has correct typing
+  enabled: true
+  name: has_start_time_as_datetime
+  passed: true
+  reason: The test passed successfully
+has_start_time_as_isostr:
+  critical: true
+  description: Checks if .start_time_as_isostr is implemented and has correct format
+  enabled: true
+  name: has_start_time_as_isostr
+  passed: true
+  reason: The test passed successfully
+has_time_as_datetime:
+  critical: true
+  description: Checks if .time_as_datetime is implemented and has correct typing
+  enabled: true
+  name: has_time_as_datetime
+  passed: true
+  reason: The test passed successfully
+has_time_as_isostr:
+  critical: true
+  description: Checks if .time_as_isostr is implemented and has correct format
+  enabled: true
+  name: has_time_as_isostr
+  passed: true
+  reason: The test passed successfully
+has_time_unit_condition:
+  critical: true
+  description: Checks if the .time_unit method of the model is correctly implemented
+  enabled: true
+  name: has_time_unit_condition
+  passed: true
+  reason: The test passed successfully
+has_vars_out_and_gets:
+  critical: true
+  description: Checks if .output_var_names, .get_value is implemented and all variables
+    are reachable and of type ndarray
+  enabled: true
+  name: has_vars_out_and_gets
+  passed: true
+  reason: The test passed successfully
+incorrect_var_name_condition:
+  critical: true
+  description: checks if error is thrown when incorrect variable is called
+  enabled: true
+  name: incorrect_var_name_condition
+  passed: true
+  reason: The test passed successfully
+incorrect_var_name_condition_bmi:
+  critical: true
+  description: checks if error is thrown when incorrect variable is called
+  enabled: true
+  name: incorrect_var_name_condition_bmi
+  passed: true
+  reason: The test passed successfully
+incorrect_var_name_val_indices_condition_bmi:
+  critical: true
+  description: Test that checks if error is thrown when incorrect variable is called
+  enabled: true
+  name: incorrect_var_name_val_indices_condition_bmi
+  passed: true
+  reason: The test passed successfully
+incorrect_var_name_xarray_condition:
+  critical: true
+  description: checks if error is thrown when incorrect variable is called
+  enabled: true
+  name: incorrect_var_name_xarray_condition
+  passed: true
+  reason: The test passed successfully
+invalid_grid_rank:
+  critical: true
+  description: tests if any of the model's grids have are of invalid rank
+  enabled: true
+  name: invalid_grid_rank
+  passed: true
+  reason: The test passed successfully
+invalid_grid_rank_condition:
+  critical: true
+  description: Tests if the bmi method get_grid_rank() gets a valid rank.
+  enabled: true
+  name: invalid_grid_rank_condition
+  passed: true
+  reason: The test passed successfully
+invalid_grid_type:
+  critical: true
+  description: tests if any of the model's grids have an invalid type
+  enabled: true
+  name: invalid_grid_type
+  passed: true
+  reason: The test passed successfully
+invalid_grid_type_condition:
+  critical: true
+  description: Tests if the bmi method get_grid_type() gets a valid type.
+  enabled: true
+  name: invalid_grid_type_condition
+  passed: true
+  reason: The test passed successfully
+model_runs_to_completion:
+  critical: true
+  description: tests if the model can run from start to end without throwing an error
+  enabled: true
+  name: model_runs_to_completion
+  passed: true
+  reason: The test passed successfully
+passed: true
+permanent_precipitation_lumped_test:
+  critical: false
+  description: Tests if the model outputs constant discharge on an input with constant
+    precipitation
+  enabled: true
+  name: permanent_precipitation_lumped_test
+  passed: true
+  reason: The test passed successfully
+positive_time_step:
+  critical: false
+  description: Checks if the time step of the model is greater than 0
+  enabled: true
+  name: positive_time_step
+  passed: true
+  reason: The test passed successfully
+pre_existing_discharge_lumped_test:
+  critical: false
+  description: Tests if the model outputs any discharge prior to the start of the
+    calculations
+  enabled: true
+  name: pre_existing_discharge_lumped_test
+  passed: true
+  reason: The test passed successfully
+proper_end_spike_handling_lumped_test:
+  critical: false
+  description: Tests if the model outputs correct discharge when there's periodical,
+    high precipitation
+  enabled: true
+  name: proper_end_spike_handling_lumped_test
+  passed: true
+  reason: The test passed successfully
+proper_mid_spike_handling_lumped_test:
+  critical: false
+  description: Tests if the model outputs correct discharge when there's periodical,
+    high precipitation
+  enabled: true
+  name: proper_mid_spike_handling_lumped_test
+  passed: true
+  reason: The test passed successfully
+proper_start_spike_handling_lumped_test:
+  critical: false
+  description: Tests if the model outputs correct discharge when there's periodical,
+    high precipitation
+  enabled: true
+  name: proper_start_spike_handling_lumped_test
+  passed: true
+  reason: The test passed successfully
+proper_time_passage:
+  critical: true
+  description: tests if the time passes properly when the model is updated
+  enabled: true
+  name: proper_time_passage
+  passed: true
+  reason: The test passed successfully
+second_half_precip_lumped_test:
+  critical: false
+  description: Tests if the model outputs correct discharge when precipitation only
+    occurs in the second half of the input period
+  enabled: true
+  name: second_half_precip_lumped_test
+  passed: true
+  reason: The test passed successfully
+some_version_condition:
+  critical: true
+  description: Checks if the .version method of the model is correctly implemented
+  enabled: true
+  name: some_version_condition
+  passed: true
+  reason: The test passed successfully
+strict_decrease_test:
+  critical: false
+  description: Tests if the model outputs decreasing discharge on an input with decreasing
+    precipitation
+  enabled: true
+  name: strict_decrease_test
+  passed: true
+  reason: The test passed successfully
+strict_increase_test:
+  critical: false
+  description: Tests if the model outputs increasing discharge on an input with increasing
+    precipitation
+  enabled: true
+  name: strict_increase_test
+  passed: true
+  reason: The test passed successfully
+test_get_time_units:
+  critical: true
+  description: Tests if the bmi method get_time_units() works correctly.
+  enabled: true
+  name: test_get_time_units
+  passed: true
+  reason: The test passed successfully
+test_get_value:
+  critical: true
+  description: Tests if the bmi method get_value() gets a list of numbers.
+  enabled: true
+  name: test_get_value
+  passed: true
+  reason: The test passed successfully
+test_get_value_at_indices:
+  critical: true
+  description: Tests if the bmi method get_value_at_indices() gets a list of numbers.
+  enabled: true
+  name: test_get_value_at_indices
+  passed: true
+  reason: The test passed successfully
+test_get_var_grid:
+  critical: true
+  description: Tests if the bmi method get_var_grid() returns a number.
+  enabled: true
+  name: test_get_var_grid
+  passed: true
+  reason: The test passed successfully
+test_get_var_itemsize:
+  critical: true
+  description: Tests if the bmi method get_var_itemsize() returns a number.
+  enabled: true
+  name: test_get_var_itemsize
+  passed: true
+  reason: The test passed successfully
+test_get_var_nbytes:
+  critical: true
+  description: Tests if the bmi method get_var_nbytes() returns a number.
+  enabled: true
+  name: test_get_var_nbytes
+  passed: true
+  reason: The test passed successfully
+test_get_var_type:
+  critical: true
+  description: Tests if the bmi method get_var_type() returns a string.
+  enabled: true
+  name: test_get_var_type
+  passed: true
+  reason: The test passed successfully
+test_set_value:
+  critical: false
+  description: Tests if the bmi method set_value() works correctly.
+  enabled: true
+  name: test_set_value
+  passed: false
+  reason: The bmi method set_value() throws an unexpected error!
+time_passage_condition:
+  critical: true
+  description: Tests if the bmi method get_current_time() updates correctly after
+    an update() call.
+  enabled: true
+  name: time_passage_condition
+  passed: true
+  reason: The test passed successfully
+zero_precipitation_lumped_test:
+  critical: false
+  description: Tests if the model outputs any discharge on an input with 0 precipitation
+  enabled: true
+  name: zero_precipitation_lumped_test
+  passed: true
+  reason: The test passed successfully
