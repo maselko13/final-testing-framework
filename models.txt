@@ -1,2 +1,4 @@
+name: wflow
+repository: https://github.com/eWaterCycle/ewatercycle-wflow
 name: LeakyBucket
 repository: https://github.com/eWaterCycle/leakybucket-bmi
