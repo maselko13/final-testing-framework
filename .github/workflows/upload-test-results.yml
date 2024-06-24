@@ -10,6 +10,7 @@ on:
 
 jobs:
   comment-on-pr:
+    if: ${{ github.event.workflow_run.conclusion != 'skipped' }}
     runs-on: self-hosted
     steps:
        # this job runs an elaborate script that gets the previous job (code above ensures that it is the model verification workflow), takes its artifacts (test results) and comments them under the related pull request.
