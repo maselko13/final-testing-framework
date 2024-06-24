@@ -51,8 +51,8 @@ jobs:
   #      - name: move-model-file
  #         run: mv -f second/Mocks.py .
          # imports the model
-        - name: install-plugin
-          run: pip install git+${{env.REPO}}
+ #       - name: install-plugin
+  #        run: pip install git+${{env.REPO}}
    #     - name: move-submission-file
   #        run: mv -f second/submission.yml .
         - name: submission-file-tests
