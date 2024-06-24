@@ -4,8 +4,8 @@ cannot_update_after_finalized_condition:
   description: Checks if the .finalize method of the model is correctly implemented
   enabled: true
   name: cannot_update_after_finalized_condition
-  passed: true
-  reason: Finalized correctly
+  passed: false
+  reason: error occurred, are these functions implemented properly? .finalize
 correct_end_time_condition:
   critical: true
   description: Tests if the bmi method get_end_time() gets the correct end time.
@@ -40,16 +40,8 @@ finalize_model_condition:
   description: Tests if the bmi method finalize() doesn't throw any errors.
   enabled: true
   name: finalize_model_condition
-  passed: true
-  reason: The test passed successfully
-first_half_precip_lumped_test:
-  critical: false
-  description: Tests if the model outputs correct discharge when precipitation only
-    occurs in the first half of the input period
-  enabled: true
-  name: first_half_precip_lumped_test
-  passed: true
-  reason: The test passed successfully
+  passed: false
+  reason: The bmi method finalize() throws an unexpected error!
 get_grid_x_condition:
   critical: true
   description: Tests if the bmi method get_grid_x() gets a valid response.
@@ -148,6 +140,13 @@ has_get_value_as_x_array:
     implemented
   enabled: true
   name: has_get_value_as_x_array
+  passed: true
+  reason: The test passed successfully
+has_get_value_at_coords:
+  critical: false
+  description: tests if the get_value_at_coords method is implemented properly
+  enabled: true
+  name: has_get_value_at_coords
   passed: true
   reason: The test passed successfully
 has_make_bmi_instance:
@@ -249,6 +248,28 @@ incorrect_var_name_condition_bmi:
   name: incorrect_var_name_condition_bmi
   passed: true
   reason: The test passed successfully
+incorrect_var_name_itemsize_condition_bmi:
+  critical: true
+  description: Test that checks if error is thrown when incorrect variable is called
+  enabled: true
+  name: incorrect_var_name_itemsize_condition_bmi
+  passed: true
+  reason: The test passed successfully
+incorrect_var_name_latlon_condition:
+  critical: true
+  description: Test that checks if error is thrown when calling latlon grid for variable
+    not in model
+  enabled: true
+  name: incorrect_var_name_latlon_condition
+  passed: true
+  reason: The test passed successfully
+incorrect_var_name_nbytes_condition_bmi:
+  critical: true
+  description: Test if error is thrown on .get_var_nbytes for incorrect variable
+  enabled: true
+  name: incorrect_var_name_nbytes_condition_bmi
+  passed: true
+  reason: The test passed successfully
 incorrect_var_name_val_indices_condition_bmi:
   critical: true
   description: Test that checks if error is thrown when incorrect variable is called
@@ -291,6 +312,32 @@ invalid_grid_type_condition:
   name: invalid_grid_type_condition
   passed: true
   reason: The test passed successfully
+kling_gupta_efficiency_lobith:
+  critical: false
+  description: Checks and returns the Kling Glupta Efficiency for location Lobith
+    netherlands
+  enabled: true
+  name: kling_gupta_efficiency_lobith
+  passed: true
+  reason: Kling-Gupta efficiency is satisfactory. Kling Gupta was -0.3680632904616501
+    , which is higher than -0.41
+kling_gupta_efficiency_rees:
+  critical: false
+  description: Checks and returns the Kling Glupta Efficiency for location Rees germany
+  enabled: true
+  name: kling_gupta_efficiency_rees
+  passed: false
+  reason: Kling-Gupta efficiency is unsatisfactory. Kling Gupta was -0.4202559156677246
+    , which is lower than -0.41
+kling_gupta_efficiency_schermbeck:
+  critical: false
+  description: Checks and returns the Kling Glupta Efficiency for location Schmermbeck
+    germany
+  enabled: true
+  name: kling_gupta_efficiency_schermbeck
+  passed: false
+  reason: Kling-Gupta efficiency is unsatisfactory. Kling Gupta was -0.901964091173191
+    , which is lower than -0.41
 model_runs_to_completion:
   critical: true
   description: tests if the model can run from start to end without throwing an error
@@ -298,52 +345,47 @@ model_runs_to_completion:
   name: model_runs_to_completion
   passed: true
   reason: The test passed successfully
-passed: true
-permanent_precipitation_lumped_test:
+nash_sutcliffe_efficiency_lobith:
   critical: false
-  description: Tests if the model outputs constant discharge on an input with constant
-    precipitation
+  description: Checks and returns the Nash Sutcliffe Efficiency for location Lobith
+    netherlands
   enabled: true
-  name: permanent_precipitation_lumped_test
+  name: nash_sutcliffe_efficiency_lobith
+  passed: false
+  reason: Nash-Sutcliffe efficiency is unsatisfactory. Nash Sutcliffe was -5.562828665527606
+    , which is lower than 0.36
+nash_sutcliffe_efficiency_rees:
+  critical: false
+  description: Checks and returns the Nash Sutcliffe Efficiency for location Rees
+    germany
+  enabled: true
+  name: nash_sutcliffe_efficiency_rees
+  passed: false
+  reason: Nash-Sutcliffe efficiency is unsatisfactory. Nash Sutcliffe was -6.194110558856229
+    , which is lower than 0.36
+nash_sutcliffe_efficiency_schermbeck:
+  critical: false
+  description: Checks and returns the Nash Sutcliffe Efficiency for location Schermbeck
+    netherlands
+  enabled: true
+  name: nash_sutcliffe_efficiency_schermbeck
+  passed: false
+  reason: Nash-Sutcliffe efficiency is unsatisfactory. Nash Sutcliffe was -2.641024508858533
+    , which is lower than 0.36
+num_outside_array_condition:
+  critical: true
+  description: Test that checks if error is thrown when calling value outside of the
+    array
+  enabled: true
+  name: num_outside_array_condition
   passed: true
   reason: The test passed successfully
+passed: false
 positive_time_step:
   critical: false
   description: Checks if the time step of the model is greater than 0
   enabled: true
   name: positive_time_step
-  passed: true
-  reason: The test passed successfully
-pre_existing_discharge_lumped_test:
-  critical: false
-  description: Tests if the model outputs any discharge prior to the start of the
-    calculations
-  enabled: true
-  name: pre_existing_discharge_lumped_test
-  passed: true
-  reason: The test passed successfully
-proper_end_spike_handling_lumped_test:
-  critical: false
-  description: Tests if the model outputs correct discharge when there's periodical,
-    high precipitation
-  enabled: true
-  name: proper_end_spike_handling_lumped_test
-  passed: true
-  reason: The test passed successfully
-proper_mid_spike_handling_lumped_test:
-  critical: false
-  description: Tests if the model outputs correct discharge when there's periodical,
-    high precipitation
-  enabled: true
-  name: proper_mid_spike_handling_lumped_test
-  passed: true
-  reason: The test passed successfully
-proper_start_spike_handling_lumped_test:
-  critical: false
-  description: Tests if the model outputs correct discharge when there's periodical,
-    high precipitation
-  enabled: true
-  name: proper_start_spike_handling_lumped_test
   passed: true
   reason: The test passed successfully
 proper_time_passage:
@@ -353,35 +395,11 @@ proper_time_passage:
   name: proper_time_passage
   passed: true
   reason: The test passed successfully
-second_half_precip_lumped_test:
-  critical: false
-  description: Tests if the model outputs correct discharge when precipitation only
-    occurs in the second half of the input period
-  enabled: true
-  name: second_half_precip_lumped_test
-  passed: true
-  reason: The test passed successfully
 some_version_condition:
   critical: true
   description: Checks if the .version method of the model is correctly implemented
   enabled: true
   name: some_version_condition
-  passed: true
-  reason: The test passed successfully
-strict_decrease_test:
-  critical: false
-  description: Tests if the model outputs decreasing discharge on an input with decreasing
-    precipitation
-  enabled: true
-  name: strict_decrease_test
-  passed: true
-  reason: The test passed successfully
-strict_increase_test:
-  critical: false
-  description: Tests if the model outputs increasing discharge on an input with increasing
-    precipitation
-  enabled: true
-  name: strict_increase_test
   passed: true
   reason: The test passed successfully
 test_get_time_units:
@@ -438,20 +456,20 @@ test_set_value:
   description: Tests if the bmi method set_value() works correctly.
   enabled: true
   name: test_set_value
-  passed: false
-  reason: The bmi method set_value() throws an unexpected error!
+  passed: true
+  reason: The test passed successfully
+test_set_value_at_indices:
+  critical: false
+  description: Tests if the bmi method set_value_at_indices() works correctly.
+  enabled: true
+  name: test_set_value_at_indices
+  passed: true
+  reason: The test passed successfully
 time_passage_condition:
   critical: true
   description: Tests if the bmi method get_current_time() updates correctly after
     an update() call.
   enabled: true
   name: time_passage_condition
-  passed: true
-  reason: The test passed successfully
-zero_precipitation_lumped_test:
-  critical: false
-  description: Tests if the model outputs any discharge on an input with 0 precipitation
-  enabled: true
-  name: zero_precipitation_lumped_test
   passed: true
   reason: The test passed successfully
