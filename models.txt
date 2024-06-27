@@ -1,2 +1,4 @@
 name: LeakyBucket
-repository: https://github.com/eWaterCycle/leakybucket-bmi
+repository: ALEXANDERVDAS/ewatercycle-leakybuckettest
+name: LeakyBucket
+repository: eWaterCycle/leakybucket-bmi
